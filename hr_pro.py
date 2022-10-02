@@ -33,11 +33,15 @@ def main():
     list1 = [] # empty lilst to be filled 
     list1.append(Employee ("laila",24 , 9999, 4))
     list1.append(Employee("Moh", 27, 999, 2))
-    list1.append(Employee("shosho", 24, 666, 1))
+    #list1.append(Employee("shosho", 24, 666, 1))
     
     for obj in list1:
-        print (obj.name, obj.age, obj.salary, obj.employment_years)
+        print(obj.name, obj.age, obj.salary, obj.employment_years)
 
+    list2 = []
+    list2.append(Manager("sammy", 52, 4600, 19, 1380))
+    for obj in list2:
+        print(obj.name, obj.age, obj.salary, obj.employment_years, obj.bonus_percentage)
 
 if __name__ == '__main__':
 	main()
