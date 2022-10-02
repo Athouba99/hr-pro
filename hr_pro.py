@@ -34,13 +34,14 @@ def main():
     lista = ["1. Show Employees","2. Show Managers","3. Add An Employee","4. Add A Manager", "5.Exit"]
     print (f"{lista[0]} \n{lista[1]} \n{lista[2]} \n{lista[3]} \n{lista[4]}")
     print("What would you like to do?\n")
-
-    lista[0] = input(int(1)) 
-    lista[1] = input(int(2))
-    lista[2] = input(int(3))
-    lista[3] = input(int(4))
-    lista[4] = input(int(5))
-
+    
+    while True:
+        lista[0] = int(input()) 
+        lista[1] = int(input())
+        lista[2] = int(input())
+        lista[3] = int(input())
+        lista[4] = int(input())
+        break 
 
     list1 = [] # empty lilst to be filled 
     list1.append(Employee ("laila",24 , 9999, 4))
@@ -58,7 +59,6 @@ def main():
     # lista = ["1. Show Employees","2. Show Managers","3. Add An Employee","4. Add A Manager", "5.Exit"]
     # for index in enumerate(lista):
     #     print("What would you like to do?")
-
    
 if __name__ == '__main__':
 	main()
