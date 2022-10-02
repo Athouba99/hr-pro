@@ -30,12 +30,18 @@ class Manager(Employee): #class 2
   
 def main():
 	# main code here
-    print ("Welcome to HR Pro \nOptions:")
+    print ("Welcome to HR Pro \n Options:")
     lista = ["1. Show Employees","2. Show Managers","3. Add An Employee","4. Add A Manager", "5.Exit"]
     print (f"{lista[0]} \n{lista[1]} \n{lista[2]} \n{lista[3]} \n{lista[4]}")
+    print("What would you like to do?\n")
 
-    input = int(lista())
-    
+    lista[0] = input(int(1)) 
+    lista[1] = input(int(2))
+    lista[2] = input(int(3))
+    lista[3] = input(int(4))
+    lista[4] = input(int(5))
+
+
     list1 = [] # empty lilst to be filled 
     list1.append(Employee ("laila",24 , 9999, 4))
     list1.append(Employee("Moh", 27, 999, 2))
