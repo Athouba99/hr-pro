@@ -9,6 +9,8 @@ class Employee:  #class 1
     def get_annual_salary(self,salary):
         return salary*12 
 
+    def __str__(self):
+        return f"Name:{self.name}, Age:{self.age}, Salary:{self.salary}, Working years:{self.employment_years}"
       
 class Manager(Employee): #class 2 
     #Manager class here
@@ -21,12 +23,21 @@ class Manager(Employee): #class 2
         self.bonus_percentage = bonus_percentage 
 
     def get_bonus(self, bonus_percentage):
-        
+        return bonus_percentage*12
 
-        
-        
+    def __str__(self):
+      return f"Name:{self.name}, Age:{self.age}, Salary:{self.salary}, Working Years:{self.employment_years}, Bonus:{self.bonus_percentage}"  
+  
 def main():
 	# main code here
+    list1 = [] # empty lilst to be filled 
+    list1.append(Employee ("laila",24 , 9999, 4))
+    list1.append(Employee("Moh", 27, 999, 2))
+    list1.append(Employee("shosho", 24, 666, 1))
+    
+    for obj in list1:
+        print (obj.name, obj.age, obj.salary, obj.employment_years)
+
 
 if __name__ == '__main__':
 	main()
